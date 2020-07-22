@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Typography, Box, Fade, Button } from '@material-ui/core';
-import { FadeInModel } from './utils/LandingPage.model';
+import { Typography, Box, Fade, Button, useTheme } from '@material-ui/core';
+import { FadeInModel, LandingPageProps } from './utils/LandingPage.model';
 
-const LandingPage: React.FC = () => {
+const LandingPage = (props: LandingPageProps): React.ReactElement => {
+	const { handleLandingButton } = props;
+	const theme = useTheme();
+
 	const [isFadedIn, setIsFadedIn] = useState<FadeInModel>({
 		quote: false,
 		attribution: false,
@@ -27,7 +30,7 @@ const LandingPage: React.FC = () => {
 	});
 
 	return (
-		<Box className="landing-box">
+		<Box className="landing-box" color={theme.palette.background.default}>
 			<Fade in={isFadedIn.quote} timeout={2000}>
 				<Typography variant="h1" className="landing-header">
 					"So you’ve got to love it and you’ve got to have passion and I think that’s the high-order bit."
@@ -39,7 +42,7 @@ const LandingPage: React.FC = () => {
 				</Typography>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
-				<Button id="landing-button" variant="outlined">
+				<Button id="landing-button" variant="outlined" onClick={handleLandingButton}>
 					Enter Site
 				</Button>
 			</Fade>
