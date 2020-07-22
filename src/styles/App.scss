@@ -1,7 +1,7 @@
 @use "_colors" as colors;
 
 .container {
-    background-color: colors.$purple;
+    background-color: colors.$dark-purple;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
 }
 
 .landing-box {
-    background-color: colors.$dark-violet;
+    background-color: colors.$very-dark-purple;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,11 +25,9 @@
 }
 
 #landing-button {
-    background-color: colors.$blue-purple;
+    background-color: colors.$purple;
     margin-top: 2rem;
     padding: 0.75rem;
-    border: 3px solid black;
-    border-radius: 5px;
 }
 
 .App-link {

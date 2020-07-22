@@ -39,7 +39,9 @@ const LandingPage: React.FC = () => {
 				</Typography>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
-				<Button id="landing-button">Enter Site</Button>
+				<Button id="landing-button" variant="outlined">
+					Enter Site
+				</Button>
 			</Fade>
 		</Box>
 	);
