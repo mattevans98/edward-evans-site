@@ -1,0 +1,19 @@
+@use "_colors" as colors;
+
+.container {
+    background-color: colors.$dark-violet;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.body-text {
+    color: colors.$pastel-purple;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
