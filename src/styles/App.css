@@ -18,8 +18,14 @@
   text-align: center;
 }
 
-.body-text, .landing-header {
+.body-text, .landing-header, #landing-button {
   color: #B9BFFF;
+}
+
+#landing-button {
+  background-color: #4066E0;
+  margin-top: 2rem;
+  padding: 0.75rem;
 }
 
 .App-link {
