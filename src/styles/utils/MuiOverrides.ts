@@ -20,3 +20,23 @@ export const useTabsOverrides = makeStyles(
 	},
 	{ name: 'MuiTabs' }
 );
+
+export const useIconButtonOverrides = makeStyles(
+	{
+		root: {
+			color: 'rgba(255, 255, 255, 0.85)'
+		}
+	},
+	{
+		name: 'MuiIconButton'
+	}
+);
+
+export const useMenuOverrides = makeStyles(
+	{
+		paper: {
+			backgroundColor: 'rgba(40, 53, 147, 0.95)'
+		}
+	},
+	{ name: 'MuiMenu' }
+);
