@@ -3,12 +3,12 @@ import { Box, Fade, Button, useTheme } from '@material-ui/core';
 import { FadeInModel } from './utils/LandingPage.model';
 import { useLandingStyles } from '../../styles/components/LandingPage.style';
 import { Link } from 'react-router-dom';
-import { useOverrides } from '../../styles/utils/MuiOverrides';
+import { useButtonOverrides } from '../../styles/utils/MuiOverrides';
 
 const LandingPage = (): React.ReactElement => {
 	const theme = useTheme();
 	const classes = useLandingStyles(theme);
-	useOverrides();
+	useButtonOverrides();
 
 	const [isFadedIn, setIsFadedIn] = useState<FadeInModel>({
 		quote: false,

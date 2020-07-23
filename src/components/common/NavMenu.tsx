@@ -1,16 +1,20 @@
 import React from 'react';
 import { AppBar, Tabs, useTheme, Tab, useMediaQuery } from '@material-ui/core';
+import HomeIcon from '@material-ui/icons/Home';
+import MenuIcon from '@material-ui/icons/Menu';
 import { NavMenuProps } from './utils/NavMenu.model';
 import { Link } from 'react-router-dom';
 import { useNavStyles } from '../../styles/components/common/NavMenu.style';
+import { useTabsOverrides } from '../../styles/utils/MuiOverrides';
 
 const NavMenu = (props: NavMenuProps): React.ReactElement => {
 	const { currentTab, handleTabChange } = props;
 	const theme = useTheme();
 	const classes = useNavStyles(theme);
+	useTabsOverrides();
 
 	return (
-		<AppBar position="sticky" className={classes.navAppBar} color="secondary">
+		<AppBar position="sticky" className={classes.navAppBar} color="primary">
 			<Tabs
 				value={currentTab}
 				onChange={handleTabChange}
@@ -18,8 +22,9 @@ const NavMenu = (props: NavMenuProps): React.ReactElement => {
 				centered={!useMediaQuery(theme.breakpoints.down('sm'))}
 			>
 				<Link to="/home" className={classes.navMenuLink}>
-					<Tab label="Home" />
+					<Tab icon={<HomeIcon />} />
 				</Link>
+				<Tab label="About" />
 				<Tab label="Projects" />
 				<Tab label="Contact" />
 			</Tabs>

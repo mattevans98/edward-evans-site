@@ -6,14 +6,14 @@ export const colorPalette = (): ThemeOptions => {
 	return {
 		palette: {
 			primary: {
-				main: deepPurple[700],
-				light: deepPurple[500],
-				dark: deepPurple[900]
-			},
-			secondary: {
 				main: indigo[700],
 				light: indigo[500],
 				dark: indigo[900]
+			},
+			secondary: {
+				main: deepPurple[700],
+				light: deepPurple[500],
+				dark: deepPurple[900]
 			},
 			background: {
 				default: `linear-gradient(30deg, ${deepPurple[900]} 40%, ${indigo[300]} 90%)`,
