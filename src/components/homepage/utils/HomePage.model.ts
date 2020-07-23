@@ -1,3 +1,4 @@
-import { ThemeChangeProps } from '../../../utils/App.model';
+import { NavMenuProps } from '../../common/utils/NavMenu.model';
+import { CommonProps } from '../../../App.model';
 
-export interface HomePageProps extends ThemeChangeProps {}
+export interface HomePageProps extends NavMenuProps, CommonProps {}

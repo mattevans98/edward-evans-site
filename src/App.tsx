@@ -2,26 +2,20 @@ import React, { useState } from 'react';
 import HomePage from './components/homepage/HomePage';
 import LandingPage from './components/landing-page/LandingPage';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { ThemeChangeProps } from './utils/App.model';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, useMediaQuery } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
-	const [isDarkMode, setIsDarkMode] = useState(true);
-	const paletteType = isDarkMode ? 'dark' : 'light';
-	const palette = colorPalette(paletteType);
+	const [currentTab, setCurrentTab] = useState(0);
+	const palette = colorPalette();
 	const themeWithColors = createMuiTheme(palette);
 	const classes = useStyles(themeWithColors);
+	const isMobile = useMediaQuery(themeWithColors.breakpoints.down('sm'));
 
-	const handleThemeChange = (): void => {
-		setIsDarkMode(!isDarkMode);
-	};
-
-	const themeChangeProps: ThemeChangeProps = {
-		isDarkMode,
-		handleThemeChange
+	const handleTabChange = (event: React.ChangeEvent<{}>, tabIndex: number): void => {
+		setCurrentTab(tabIndex);
 	};
 
 	return (
@@ -30,7 +24,7 @@ const App = (): React.ReactElement => {
 			<div className={classes.rootContainer}>
 				<Switch>
 					<Route path="/home">
-						<HomePage {...themeChangeProps} />
+						<HomePage {...{ isMobile, currentTab, handleTabChange }} />
 					</Route>
 					<Route path="/">
 						<LandingPage />
