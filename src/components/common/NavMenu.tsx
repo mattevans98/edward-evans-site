@@ -1,7 +1,6 @@
 import React from 'react';
 import { AppBar, Tabs, useTheme, Tab, useMediaQuery } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
-import MenuIcon from '@material-ui/icons/Menu';
 import { NavMenuProps } from './utils/NavMenu.model';
 import { Link } from 'react-router-dom';
 import { useNavStyles } from '../../styles/components/common/NavMenu.style';

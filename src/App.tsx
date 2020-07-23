@@ -4,7 +4,7 @@ import LandingPage from './components/landing-page/LandingPage';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, useMediaQuery } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
@@ -12,6 +12,7 @@ const App = (): React.ReactElement => {
 	const palette = colorPalette();
 	const themeWithColors = createMuiTheme(palette);
 	const classes = useStyles(themeWithColors);
+	const isMobile = useMediaQuery(themeWithColors.breakpoints.down('sm'));
 
 	const handleTabChange = (event: React.ChangeEvent<{}>, tabIndex: number): void => {
 		setCurrentTab(tabIndex);
@@ -23,7 +24,7 @@ const App = (): React.ReactElement => {
 			<div className={classes.rootContainer}>
 				<Switch>
 					<Route path="/home">
-						<HomePage {...{ currentTab, handleTabChange }} />
+						<HomePage {...{ isMobile, currentTab, handleTabChange }} />
 					</Route>
 					<Route path="/">
 						<LandingPage />
