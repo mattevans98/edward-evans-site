@@ -6,10 +6,10 @@ import { ThemeChangeProps } from './utils/App.model';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
 import { CssBaseline } from '@material-ui/core';
+import { Switch, Route } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
 	const [isDarkMode, setIsDarkMode] = useState(true);
-	const [isLanding, setIsLanding] = useState(true);
 	const paletteType = isDarkMode ? 'dark' : 'light';
 	const palette = colorPalette(paletteType);
 	const themeWithColors = createMuiTheme(palette);
@@ -24,15 +24,18 @@ const App = (): React.ReactElement => {
 		handleThemeChange
 	};
 
-	const handleLandingButton = (): void => {
-		setIsLanding(false);
-	};
-
 	return (
 		<ThemeProvider theme={themeWithColors}>
 			<CssBaseline />
 			<div className={classes.rootContainer}>
-				{isLanding ? <LandingPage {...{ handleLandingButton }} /> : <HomePage {...themeChangeProps} />}
+				<Switch>
+					<Route path="/home">
+						<HomePage {...themeChangeProps} />
+					</Route>
+					<Route path="/">
+						<LandingPage />
+					</Route>
+				</Switch>
 			</div>
 		</ThemeProvider>
 	);

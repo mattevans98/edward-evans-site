@@ -37,5 +37,9 @@ export const useLandingStyles = makeStyles({
 	},
 	landingButton: {
 		textAlign: 'center'
+	},
+	landingLinkRoute: {
+		color: 'inherit',
+		textDecoration: 'none'
 	}
 });
