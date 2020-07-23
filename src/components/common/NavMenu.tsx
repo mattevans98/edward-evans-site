@@ -1,11 +1,11 @@
 import React from 'react';
-import { AppBar, Tabs, useTheme, Tab, useMediaQuery, Switch, FormControlLabel } from '@material-ui/core';
+import { AppBar, Tabs, useTheme, Tab, useMediaQuery } from '@material-ui/core';
 import { NavMenuProps } from './utils/NavMenu.model';
 import { Link } from 'react-router-dom';
 import { useNavStyles } from '../../styles/components/common/NavMenu.style';
 
 const NavMenu = (props: NavMenuProps): React.ReactElement => {
-	const { isDarkMode, handleThemeChange, currentTab, handleTabChange } = props;
+	const { currentTab, handleTabChange } = props;
 	const theme = useTheme();
 	const classes = useNavStyles(theme);
 
@@ -22,7 +22,6 @@ const NavMenu = (props: NavMenuProps): React.ReactElement => {
 				</Link>
 				<Tab label="Projects" />
 				<Tab label="Contact" />
-				<FormControlLabel control={<Switch checked={isDarkMode} onChange={handleThemeChange} name="themeSwitch" />} label="Theme" />
 			</Tabs>
 		</AppBar>
 	);
