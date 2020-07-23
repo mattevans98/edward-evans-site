@@ -14,7 +14,7 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 	const [fadeInStep, setFadeInStep] = useState<number>(0);
 
 	useEffect(() => {
-		const fadeInTimer = setInterval((): void => {
+		const fadeInDelay = setTimeout((): void => {
 			setIsFadedIn((prevState) => {
 				let newVals = {
 					...prevState
@@ -25,13 +25,11 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 			setFadeInStep((prevState) => prevState + 1);
 			console.log(`fadeInStep = ${fadeInStep}`);
 		}, 1500);
-		if (fadeInStep === 3) {
-			clearInterval(fadeInTimer);
+
+		if (fadeInStep > 2) {
+			clearTimeout(fadeInDelay);
+			console.log('Timeout cleared!');
 		}
-		return () => {
-			clearInterval(fadeInTimer);
-			console.log('Interval effect cleaned up and cleared!');
-		};
 	}, [fadeInStep]);
 
 	return (
