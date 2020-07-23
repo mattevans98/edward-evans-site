@@ -8,6 +8,13 @@ export const colorPalette = (colorTheme): ThemeOptions => {
 	const gradientColor2 = isDark ? indigo[400] : indigo[200];
 
 	return {
+		overrides: {
+			MuiSwitch: {
+				track: {
+					backgroundColor: colorTheme === 'dark' ? '#fff' : '#22277A'
+				}
+			}
+		},
 		palette: {
 			type: colorTheme,
 			primary: {
