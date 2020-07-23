@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Typography, Box, Fade, Button, useTheme } from '@material-ui/core';
 import { FadeInModel, LandingPageProps } from './utils/LandingPage.model';
+import { useLandingStyles } from '../../styles/components/LandingPage.style';
 
 const LandingPage = (props: LandingPageProps): React.ReactElement => {
 	const { handleLandingButton } = props;
 	const theme = useTheme();
+	const classes = useLandingStyles(theme);
 
 	const [isFadedIn, setIsFadedIn] = useState<FadeInModel>({
 		quote: false,
@@ -33,19 +35,19 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 	}, [fadeInStep]);
 
 	return (
-		<Box className="landing-box" style={{ background: theme.palette.background.default }}>
+		<Box className={classes.landingBox}>
 			<Fade in={isFadedIn.quote} timeout={2000}>
-				<Typography variant="h1" className="landing-header">
+				<Typography variant="h1" className={classes.landingHeader}>
 					"So you’ve got to love it and you’ve got to have passion and I think that’s the high-order bit."
 				</Typography>
 			</Fade>
 			<Fade in={isFadedIn.attribution} timeout={2000}>
-				<Typography variant="h3" className="landing-header">
+				<Typography variant="h3" className={classes.landingHeader}>
 					-Steve Jobs
 				</Typography>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
-				<Button id="landing-button" variant="outlined" onClick={handleLandingButton}>
+				<Button className={classes.landingButton} variant="outlined" onClick={handleLandingButton}>
 					Enter Site
 				</Button>
 			</Fade>
