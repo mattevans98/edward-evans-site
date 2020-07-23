@@ -4,13 +4,6 @@ import indigo from '@material-ui/core/colors/indigo';
 
 export const colorPalette = (): ThemeOptions => {
 	return {
-		overrides: {
-			MuiSwitch: {
-				track: {
-					backgroundColor: '#fff'
-				}
-			}
-		},
 		palette: {
 			primary: {
 				main: deepPurple[700],
