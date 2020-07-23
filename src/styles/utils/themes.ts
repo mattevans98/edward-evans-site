@@ -12,7 +12,6 @@ export const colorPalette = (): ThemeOptions => {
 			}
 		},
 		palette: {
-			type: 'dark',
 			primary: {
 				main: deepPurple[700],
 				light: deepPurple[500],
