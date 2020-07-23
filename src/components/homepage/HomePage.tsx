@@ -5,13 +5,14 @@ import { useHomeStyles } from '../../styles/components/HomePage.style';
 import NavMenu from '../common/NavMenu';
 
 const HomePage = (props: HomePageProps): React.ReactElement => {
+	const { isMobile } = props;
 	const theme = useTheme();
 	const classes = useHomeStyles(theme);
 
 	return (
 		<Box className={classes.homeBox}>
 			<NavMenu {...props} />
-			<h1 className={classes.homeH1}>High-Order Bit, LLC.</h1>
+			{isMobile ? <></> : <h1 className={classes.homeH1}>High-Order Bit, LLC.</h1>}
 		</Box>
 	);
 };

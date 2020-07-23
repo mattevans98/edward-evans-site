@@ -40,3 +40,13 @@ export const useMenuOverrides = makeStyles(
 	},
 	{ name: 'MuiMenu' }
 );
+
+export const useToolbarOverrides = makeStyles(
+	{
+		root: {
+			display: 'flex',
+			justifyContent: 'space-between'
+		}
+	},
+	{ name: 'MuiToolbar' }
+);

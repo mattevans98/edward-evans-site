@@ -8,5 +8,10 @@ export const useNavStyles = makeStyles({
 	navAppBar: {
 		width: '100vw',
 		marginBottom: '3vh'
-	}
+	},
+	mobileTitle: {
+		textAlign: 'center',
+		fontSize: '1.5rem'
+	},
+	mobileMenuButton: {}
 });
