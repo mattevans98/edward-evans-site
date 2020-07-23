@@ -6,11 +6,34 @@ export const useLandingStyles = makeStyles({
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
-		minHeight: '100vh'
+		minHeight: '100vh',
+		marginLeft: '5%',
+		marginRight: '5%',
+		// eslint-disable-next-line
+		['@media (min-width:760px)']: {
+			marginLeft: '10%',
+			marginRight: '10%'
+		}
 	},
-	landingHeader: {
+	landingHeader1: {
 		textAlign: 'center',
-		marginBottom: '2rem'
+		marginBottom: '0.5rem',
+		marginTop: 0,
+		fontSize: '1.75rem',
+		// eslint-disable-next-line
+		['@media (min-width:760px)']: {
+			fontSize: '3.5rem'
+		}
+	},
+	landingHeader2: {
+		textAlign: 'center',
+		marginBottom: '1.5rem',
+		marginTop: 0,
+		fontSize: '1.25rem',
+		// eslint-disable-next-line
+		['@media (min-width:760px)']: {
+			fontSize: '2rem'
+		}
 	},
 	landingButton: {
 		textAlign: 'center'

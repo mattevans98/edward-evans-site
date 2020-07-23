@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Typography, Box, Fade, Button, useTheme } from '@material-ui/core';
+import { Box, Fade, Button, useTheme } from '@material-ui/core';
 import { FadeInModel, LandingPageProps } from './utils/LandingPage.model';
 import { useLandingStyles } from '../../styles/components/LandingPage.style';
 
@@ -37,14 +37,12 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 	return (
 		<Box className={classes.landingBox}>
 			<Fade in={isFadedIn.quote} timeout={2000}>
-				<Typography variant="h1" className={classes.landingHeader}>
+				<h1 className={classes.landingHeader1}>
 					"So you’ve got to love it and you’ve got to have passion and I think that’s the high-order bit."
-				</Typography>
+				</h1>
 			</Fade>
 			<Fade in={isFadedIn.attribution} timeout={2000}>
-				<Typography variant="h3" className={classes.landingHeader}>
-					-Steve Jobs
-				</Typography>
+				<h2 className={classes.landingHeader2}>-Steve Jobs</h2>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
 				<Button className={classes.landingButton} variant="outlined" onClick={handleLandingButton}>
