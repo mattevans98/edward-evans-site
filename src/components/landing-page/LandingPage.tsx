@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Fade, Button, useTheme } from '@material-ui/core';
-import { FadeInModel, LandingPageProps } from './utils/LandingPage.model';
+import { FadeInModel } from './utils/LandingPage.model';
 import { useLandingStyles } from '../../styles/components/LandingPage.style';
+import { Link } from 'react-router-dom';
 
-const LandingPage = (props: LandingPageProps): React.ReactElement => {
-	const { handleLandingButton } = props;
+const LandingPage = (): React.ReactElement => {
 	const theme = useTheme();
 	const classes = useLandingStyles(theme);
 
@@ -45,9 +45,11 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 				<h2 className={classes.landingHeader2}>-Steve Jobs</h2>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
-				<Button className={classes.landingButton} variant="outlined" onClick={handleLandingButton}>
-					Enter Site
-				</Button>
+				<Link to="/home" className={classes.landingLinkRoute}>
+					<Button className={classes.landingButton} variant="outlined">
+						Enter Site
+					</Button>
+				</Link>
 			</Fade>
 		</Box>
 	);

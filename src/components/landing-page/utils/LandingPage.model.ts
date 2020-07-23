@@ -3,7 +3,3 @@ export interface FadeInModel {
 	attribution: boolean;
 	enterButton: boolean;
 }
-
-export interface LandingPageProps {
-	handleLandingButton: () => void;
-}
