@@ -2,21 +2,10 @@ import { ThemeOptions } from '@material-ui/core';
 import deepPurple from '@material-ui/core/colors/deepPurple';
 import indigo from '@material-ui/core/colors/indigo';
 
-// export const theme = createMuiTheme({
-// 	palette: {
-// 		type: 'dark',
-// 		primary: {
-// 			main: deepPurple[700],
-// 			light: deepPurple[500],
-// 			dark: deepPurple[900]
-// 		}
-// 	}
-// });
-
 export const colorPalette = (colorTheme): ThemeOptions => {
 	const isDark = colorTheme === 'dark';
 	const gradientColor1 = isDark ? deepPurple[900] : deepPurple[300];
-	const gradientColor2 = deepPurple[600];
+	const gradientColor2 = isDark ? indigo[400] : indigo[200];
 
 	return {
 		palette: {
@@ -32,7 +21,7 @@ export const colorPalette = (colorTheme): ThemeOptions => {
 				dark: isDark ? indigo[900] : indigo[500]
 			},
 			background: {
-				default: `linear-gradient(45deg, ${gradientColor1} 30%, ${gradientColor2} 90%)`,
+				default: `linear-gradient(30deg, ${gradientColor1} 20%, ${gradientColor2} 90%)`,
 				paper: `linear-gradient(90deg, ${gradientColor2} 30%, ${gradientColor1} 90%)`
 			}
 		}

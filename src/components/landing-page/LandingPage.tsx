@@ -13,7 +13,7 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 	});
 	const [fadeInStep, setFadeInStep] = useState<number>(0);
 
-	useEffect((): void => {
+	useEffect(() => {
 		const fadeInTimer = setInterval((): void => {
 			setIsFadedIn((prevState) => {
 				let newVals = {
@@ -23,14 +23,19 @@ const LandingPage = (props: LandingPageProps): React.ReactElement => {
 				return newVals;
 			});
 			setFadeInStep((prevState) => prevState + 1);
+			console.log(`fadeInStep = ${fadeInStep}`);
 		}, 1500);
 		if (fadeInStep === 3) {
 			clearInterval(fadeInTimer);
 		}
-	});
+		return () => {
+			clearInterval(fadeInTimer);
+			console.log('Interval effect cleaned up and cleared!');
+		};
+	}, [fadeInStep]);
 
 	return (
-		<Box className="landing-box" color={theme.palette.background.default}>
+		<Box className="landing-box" style={{ background: theme.palette.background.default }}>
 			<Fade in={isFadedIn.quote} timeout={2000}>
 				<Typography variant="h1" className="landing-header">
 					"So you’ve got to love it and you’ve got to have passion and I think that’s the high-order bit."
