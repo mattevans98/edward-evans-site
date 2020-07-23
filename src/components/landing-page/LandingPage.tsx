@@ -3,10 +3,12 @@ import { Box, Fade, Button, useTheme } from '@material-ui/core';
 import { FadeInModel } from './utils/LandingPage.model';
 import { useLandingStyles } from '../../styles/components/LandingPage.style';
 import { Link } from 'react-router-dom';
+import { useOverrides } from '../../styles/utils/MuiOverrides';
 
 const LandingPage = (): React.ReactElement => {
 	const theme = useTheme();
 	const classes = useLandingStyles(theme);
+	useOverrides();
 
 	const [isFadedIn, setIsFadedIn] = useState<FadeInModel>({
 		quote: false,
@@ -42,7 +44,7 @@ const LandingPage = (): React.ReactElement => {
 				</h1>
 			</Fade>
 			<Fade in={isFadedIn.attribution} timeout={2000}>
-				<h2 className={classes.landingHeader2}>-Steve Jobs</h2>
+				<h2 className={classes.landingHeader2}>-Steve Jobs on loving your work</h2>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
 				<Link to="/home" className={classes.landingLinkRoute}>
