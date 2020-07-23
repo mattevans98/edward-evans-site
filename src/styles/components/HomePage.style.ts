@@ -9,7 +9,7 @@ export const useHomeStyles = makeStyles({
 		marginLeft: '5%',
 		marginRight: '5%',
 		// eslint-disable-next-line
-		['@media (min-width:760px)']: {
+		['@media (min-width:960px)']: {
 			marginLeft: '10%',
 			marginRight: '10%'
 		}
@@ -20,7 +20,11 @@ export const useHomeStyles = makeStyles({
 		marginTop: 0,
 		fontSize: '1.75rem',
 		// eslint-disable-next-line
-		['@media (min-width:760px)']: {
+		['@media (min-width:960px)']: {
+			fontSize: '2rem'
+		},
+		// eslint-disable-next-line
+		['@media (min-width:1280px)']: {
 			fontSize: '3rem'
 		}
 	}
