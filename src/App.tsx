@@ -10,6 +10,7 @@ import { Switch, Route } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
 	const [isDarkMode, setIsDarkMode] = useState(true);
+	const [currentTab, setCurrentTab] = useState(0);
 	const paletteType = isDarkMode ? 'dark' : 'light';
 	const palette = colorPalette(paletteType);
 	const themeWithColors = createMuiTheme(palette);
@@ -17,6 +18,10 @@ const App = (): React.ReactElement => {
 
 	const handleThemeChange = (): void => {
 		setIsDarkMode(!isDarkMode);
+	};
+
+	const handleTabChange = (event: React.ChangeEvent<{}>, tabIndex: number): void => {
+		setCurrentTab(tabIndex);
 	};
 
 	const themeChangeProps: ThemeChangeProps = {
@@ -30,7 +35,7 @@ const App = (): React.ReactElement => {
 			<div className={classes.rootContainer}>
 				<Switch>
 					<Route path="/home">
-						<HomePage {...themeChangeProps} />
+						<HomePage {...{ ...themeChangeProps, currentTab, handleTabChange }} />
 					</Route>
 					<Route path="/">
 						<LandingPage />
