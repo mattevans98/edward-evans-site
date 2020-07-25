@@ -1,0 +1,17 @@
+{
+  "repository":  "https://github.com/mattevans98/high-order-bit-site",
+  "website": "https://www.high-orderbit.com",
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "yarn install --frozen-lockfile",
+        "test": "yarn run cypress open"
+      }
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "mars/create-react-app"
+    }
+  ]
+}
