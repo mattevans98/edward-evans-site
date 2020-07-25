@@ -4,7 +4,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "yarn install --frozen-lockfile",
+        "test-setup": "yarn install --frozen-lockfile & yarn add -D cypress & apt-get install libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb",
         "test": "yarn test"
       }
     }
