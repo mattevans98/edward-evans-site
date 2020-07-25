@@ -27,5 +27,14 @@ export const useHomeStyles = makeStyles({
 		['@media (min-width:1280px)']: {
 			fontSize: '3rem'
 		}
+	},
+	underConstructionBox: {
+		border: '2px solid white',
+		padding: '1rem',
+		margin: '2rem',
+		// eslint-disable-next-line
+		['@media (min-width:600px)']: {
+			padding: '3rem'
+		}
 	}
 });
