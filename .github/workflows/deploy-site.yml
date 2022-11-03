@@ -27,4 +27,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run yarn start
-        run: yarn start
+      - run: yarn install
+      - run: yarn start
