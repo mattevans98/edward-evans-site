@@ -26,7 +26,5 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Install dependencies
       - run: yarn
-      - name: Run yarn start
       - run: yarn start
