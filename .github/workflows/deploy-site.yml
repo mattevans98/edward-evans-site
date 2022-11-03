@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - run: yarn
-      - run: yarn build:production
+      - run: yarn run build
