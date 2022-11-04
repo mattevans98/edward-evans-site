@@ -37,7 +37,7 @@ const LandingPage = (): React.ReactElement => {
 	}, [fadeInStep]);
 
 	return (
-		<Box className={classes.landingBox}>
+		<div className={classes.landingBox}>
 			<Fade in={isFadedIn.quote} timeout={2000}>
 				<h1 className={classes.landingHeader1}>
 					"So you’ve got to love it and you’ve got to have passion and I think that’s the high-order bit."
@@ -53,7 +53,7 @@ const LandingPage = (): React.ReactElement => {
 					</Button>
 				</Link>
 			</Fade>
-		</Box>
+		</div>
 	);
 };
 
