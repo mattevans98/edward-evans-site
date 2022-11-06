@@ -1,7 +1,7 @@
 {
-  "name": "react-portfolio-site",
+  "name": "high-order-bit-site",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -14,15 +14,12 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "create-react-app": "^5.0.1",
-    "gh-pages": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build  --openssl-legacy-provider",
     "test:cypress": "cypress open",
@@ -67,7 +64,6 @@
   "jest": {},
   "engines": {
     "node": "16.x",
-    "npm": "8.x",
-    "yarn": "3.x"
+    "npm": "8.x"
   }
 }
