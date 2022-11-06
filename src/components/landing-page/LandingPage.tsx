@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Fade, Button, useTheme } from '@material-ui/core';
+import { Fade, Button, useTheme } from '@material-ui/core';
 import { FadeInModel } from './utils/LandingPage.model';
 import { useLandingStyles } from '../../styles/components/LandingPage.style';
 import { Link } from 'react-router-dom';
@@ -39,17 +39,17 @@ const LandingPage = (): React.ReactElement => {
 	return (
 		<div className={classes.landingBox}>
 			<Fade in={isFadedIn.quote} timeout={2000}>
-				<h1 className={classes.landingHeader1}>
-					"So you’ve got to love it and you’ve got to have passion and I think that’s the high-order bit."
+				<h1 className={ classes.landingHeader1 }>
+					"You’ve got to love your work and you’ve got to have passion for it. I think that’s the high-order bit."
 				</h1>
 			</Fade>
 			<Fade in={isFadedIn.attribution} timeout={2000}>
-				<h2 className={classes.landingHeader2}>-Steve Jobs on loving your work</h2>
+				<h2 className={ classes.landingHeader2 }>-Steve Jobs</h2>
 			</Fade>
 			<Fade in={isFadedIn.enterButton} timeout={2000}>
 				<Link to="/home" className={classes.landingLinkRoute}>
 					<Button className={classes.landingButton} variant="outlined">
-						Enter Site
+						Enter
 					</Button>
 				</Link>
 			</Fade>
