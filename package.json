@@ -51,7 +51,6 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
-    "eslint": "^8.27.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-import": "^2.22.0",
@@ -65,5 +64,6 @@
   "engines": {
     "node": "16.x",
     "npm": "8.x"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
