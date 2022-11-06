@@ -63,5 +63,9 @@
     "prettier": "^2.0.5",
     "typescript": "^4.8.4"
   },
-  "jest": {}
+  "jest": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
 }
