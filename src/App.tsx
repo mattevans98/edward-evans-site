@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
 import { CssBaseline, useMediaQuery } from '@material-ui/core';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
 	const [currentTab, setCurrentTab] = useState(0);
@@ -20,16 +20,12 @@ const App = (): React.ReactElement => {
 
 	return (
 		<ThemeProvider theme={themeWithColors}>
-			<CssBaseline />
-			<div className={classes.rootContainer}>
-				<Switch>
-					<Route path="/home">
-						<HomePage {...{ isMobile, currentTab, handleTabChange }} />
-					</Route>
-					<Route path="/">
-						<LandingPage />
-					</Route>
-				</Switch>
+			<CssBaseline/>
+			<div className={ classes.rootContainer }>
+				<Routes>
+					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
+					<Route path="/" element={ <LandingPage/> }/>
+				</Routes>
 			</div>
 		</ThemeProvider>
 	);
