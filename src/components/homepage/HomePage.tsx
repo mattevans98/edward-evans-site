@@ -20,8 +20,8 @@ const HomePage = (props: HomePageProps): React.ReactElement => {
 				</Typography>
 			)}
 			<div className={classes.underConstructionBox}>
-				<Typography variant="h1" className={classes.homeH1}>
-					This site is under construction and will be regularly updated with improvements and new content
+				<Typography variant="h1" className={ classes.homeH1 }>
+					This site is a WIP and will be regularly updated with improvements and new content
 				</Typography>
 			</div>
 		</div>
