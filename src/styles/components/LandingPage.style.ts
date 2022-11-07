@@ -1,5 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
+// TODO: Remove hardcoded color values
+
 export const useLandingStyles = makeStyles({
 	landingBox: {
 		display: 'flex',
@@ -62,7 +64,8 @@ export const useLandingStyles = makeStyles({
 		}
 	},
 	landingButton: {
-		textAlign: 'center'
+		textAlign: 'center',
+		borderColor: 'rgba(255, 255, 255, 0.85)',
 	},
 	landingLinkRoute: {
 		color: 'inherit',
