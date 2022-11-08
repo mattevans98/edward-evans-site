@@ -4,7 +4,7 @@ import LandingPage from './components/landing-page/LandingPage';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
-import { CssBaseline, useMediaQuery } from '@material-ui/core';
+import { useMediaQuery } from '@material-ui/core';
 import { Route, Routes } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
@@ -20,7 +20,6 @@ const App = (): React.ReactElement => {
 
 	return (
 		<ThemeProvider theme={themeWithColors}>
-			<CssBaseline/>
 			<div className={ classes.rootContainer }>
 				<Routes>
 					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
