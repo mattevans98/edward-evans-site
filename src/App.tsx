@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { Box, CssBaseline, useMediaQuery } from '@material-ui/core';
 import HomePage from './components/homepage/HomePage';
 import LandingPage from './components/landing-page/LandingPage';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
-import { useMediaQuery } from '@material-ui/core';
 import { Route, Routes } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
@@ -19,13 +19,14 @@ const App = (): React.ReactElement => {
 	};
 
 	return (
-		<ThemeProvider theme={themeWithColors}>
-			<div className={ classes.rootContainer }>
+		<ThemeProvider theme={ themeWithColors }>
+			<CssBaseline/>
+			<Box className={ classes.rootContainer }>
 				<Routes>
 					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
 					<Route path="/" element={ <LandingPage/> }/>
 				</Routes>
-			</div>
+			</Box>
 		</ThemeProvider>
 	);
 };
