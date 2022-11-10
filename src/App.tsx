@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
+import { Box, CssBaseline, useMediaQuery } from '@material-ui/core';
 import HomePage from './components/homepage/HomePage';
 import LandingPage from './components/landing-page/LandingPage';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
-import { CssBaseline, useMediaQuery } from '@material-ui/core';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
 	const [currentTab, setCurrentTab] = useState(0);
 	const palette = colorPalette();
-	const themeWithColors = createMuiTheme(palette);
+	const themeWithColors = createTheme(palette);
 	const classes = useStyles(themeWithColors);
 	const isMobile = useMediaQuery(themeWithColors.breakpoints.down('sm'));
 
@@ -19,18 +19,14 @@ const App = (): React.ReactElement => {
 	};
 
 	return (
-		<ThemeProvider theme={themeWithColors}>
-			<CssBaseline />
-			<div className={classes.rootContainer}>
-				<Switch>
-					<Route path="/home">
-						<HomePage {...{ isMobile, currentTab, handleTabChange }} />
-					</Route>
-					<Route path="/">
-						<LandingPage />
-					</Route>
-				</Switch>
-			</div>
+		<ThemeProvider theme={ themeWithColors }>
+			<CssBaseline/>
+			<Box className={ classes.rootContainer }>
+				<Routes>
+					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
+					<Route path="/" element={ <LandingPage/> }/>
+				</Routes>
+			</Box>
 		</ThemeProvider>
 	);
 };
