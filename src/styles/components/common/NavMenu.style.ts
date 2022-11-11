@@ -10,7 +10,8 @@ export const useNavStyles = makeStyles({
         width: '100vw',
         marginBottom: '3vh',
         background: colors.background.secondary,
-        boxShadow: '0px 0px 15px 2px rgba(0, 0, 0, 0.8)',
+        boxShadow: '0px 0px 1em 0.125em rgba(0, 0, 0, 0.8)',
+        color: colors.text.primary,
     },
     mobileTitle: {
         textAlign: 'center',

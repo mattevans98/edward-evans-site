@@ -7,7 +7,7 @@ export const colors = {
         secondary: `linear-gradient(90deg, ${ deepPurple[900] } 30%, ${ indigo[700] } 90%)`,
     },
     text: {
-        primary: 'rgba(255, 255, 255, 0.85)',
+        primary: '#fff',
     }
 }
 
