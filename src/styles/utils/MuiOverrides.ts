@@ -21,6 +21,15 @@ export const useTabsOverrides = makeStyles(
     { name: 'MuiTabs' }
 );
 
+export const useNavButtonOverrides = makeStyles(
+    {
+        root: {
+            fontWeight: 700
+        }
+    },
+    { name: 'MuiButtonBase' }
+);
+
 export const useIconButtonOverrides = makeStyles(
     {
         root: {
