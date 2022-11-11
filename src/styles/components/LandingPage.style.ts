@@ -30,7 +30,7 @@ export const useLandingStyles = makeStyles({
     landingHeader1: {
         textAlign: 'center',
         marginBottom: '0.5rem',
-        marginTop: 0,
+        marginTop: '0',
         fontSize: '1.5rem',
         // eslint-disable-next-line
         ['@media (min-width:600px)']: {

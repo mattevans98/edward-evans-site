@@ -1,9 +1,10 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
+import colors from "../colors";
 
 export const useButtonOverrides = makeStyles(
     {
         label: {
-            color: 'rgba(255, 255, 255, 0.95)'
+            color: colors.text.primary
         },
         outlined: {
             border: '1px solid rgba(255, 255, 255, 0.5)'
@@ -21,10 +22,19 @@ export const useTabsOverrides = makeStyles(
     { name: 'MuiTabs' }
 );
 
+export const useNavButtonOverrides = makeStyles(
+    {
+        root: {
+            fontWeight: 700
+        }
+    },
+    { name: 'MuiButtonBase' }
+);
+
 export const useIconButtonOverrides = makeStyles(
     {
         root: {
-            color: 'rgba(255, 255, 255, 0.85)'
+            color: colors.text.primary
         }
     },
     {
@@ -35,7 +45,7 @@ export const useIconButtonOverrides = makeStyles(
 export const useMenuOverrides = makeStyles(
     {
         paper: {
-            backgroundColor: 'rgba(40, 53, 147, 0.95)'
+            background: colors.background.secondary
         }
     },
     { name: 'MuiMenu' }

@@ -6,15 +6,15 @@ import MobileMenu from './menus/MobileMenu';
 import DesktopMenu from './menus/DesktopMenu';
 
 const NavMenu = (props: NavMenuProps): React.ReactElement => {
-	const { isMobile } = props;
-	const theme = useTheme();
-	const classes = useNavStyles(theme);
+    const { isMobile } = props;
+    const theme = useTheme();
+    const classes = useNavStyles(theme);
 
-	return (
-		<AppBar position="sticky" className={classes.navAppBar} color="primary">
-			{isMobile ? <MobileMenu /> : <DesktopMenu {...props} />}
-		</AppBar>
-	);
+    return (
+        <AppBar position="sticky" className={ classes.navAppBar } color="primary">
+            { isMobile ? <MobileMenu/> : <DesktopMenu { ...props } /> }
+        </AppBar>
+    );
 };
 
 export default NavMenu;

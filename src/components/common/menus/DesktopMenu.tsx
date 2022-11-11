@@ -2,7 +2,7 @@ import React from 'react';
 import { Tab, Tabs, useTheme } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useNavStyles } from '../../../styles/components/common/NavMenu.style';
-import { useTabsOverrides } from '../../../styles/utils/MuiOverrides';
+import { useNavButtonOverrides, useTabsOverrides } from '../../../styles/utils/MuiOverrides';
 import { NavMenuProps } from '../utils/NavMenu.model';
 import HomeIcon from '@material-ui/icons/Home';
 
@@ -11,6 +11,7 @@ const DesktopMenu = (props: NavMenuProps): React.ReactElement => {
 	const theme = useTheme();
 	const classes = useNavStyles(theme);
 	useTabsOverrides();
+	useNavButtonOverrides();
 
 	return (
 		<Tabs value={ currentTab } onChange={ handleTabChange }>

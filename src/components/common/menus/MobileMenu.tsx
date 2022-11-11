@@ -32,20 +32,20 @@ const MobileMenu = (): React.ReactElement => {
 					<MenuItem onClick={handleClose}>Home</MenuItem>
 				</Link>
 				<Link to="/" className={classes.navMenuLink}>
-					<MenuItem onClick={handleClose}>About</MenuItem>
+					<MenuItem onClick={ handleClose }>About</MenuItem>
 				</Link>
-				<Link to="/" className={classes.navMenuLink}>
-					<MenuItem onClick={handleClose}>Projects</MenuItem>
+				<Link to="/" className={ classes.navMenuLink }>
+					<MenuItem onClick={ handleClose }>Projects</MenuItem>
 				</Link>
-				<Link to="/" className={classes.navMenuLink}>
-					<MenuItem onClick={handleClose}>Contact</MenuItem>
+				<Link to="/" className={ classes.navMenuLink }>
+					<MenuItem onClick={ handleClose }>Contact</MenuItem>
 				</Link>
 			</Menu>
-			<Typography variant="h1" className={classes.mobileTitle}>
-				High-Order Bit, LLC.
+			<Typography variant="h1" className={ classes.mobileTitle }>
+				High-Order Bit
 			</Typography>
 			<IconButton edge="end">
-				<DesktopMacIcon />
+				<DesktopMacIcon/>
 			</IconButton>
 		</Toolbar>
 	);
