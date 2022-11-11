@@ -16,22 +16,22 @@ const HomePage = (props: HomePageProps): React.ReactElement => {
 				<></>
 			) : (
 				<Typography variant="h1" className={ classes.homeH1 }>
-					High-Order Bit, LLC.
+					Edward Evans Technology, LLC.
 				</Typography>
 			) }
 
 			<Box>
 				<Typography variant="body1" className={ classes.homeP }>
-					High-Order Bit is the personal portfolio site of Matt Evans. Visit the 'About' page from the nav menu to learn more
-					about me and my skills and development experience.
+					Edward Evans Technology is a small web development company owned by Matt Evans. Visit the 'About' page from the nav menu
+					to learn more about Matt and his software development skills and experience.
 				</Typography>
 				<Typography variant="body1" className={ classes.homeP }>
-					If you would like to take a look at some of my personal projects, visit the 'Projects page from the nav menu. There you
-					will find links to my GitHub repository as well as the URLs to any of live projects I have developed.
+					If you would like to take a look at some of Matt's personal projects, visit the 'Projects page from the nav menu. There
+					you will find links to his GitHub repository as well as the URLs to any of live projects he has developed.
 				</Typography>
 				<Typography variant="body1" className={ classes.homeP }>
-					If you would like to contact me with any offers or questions, please visit the 'Contact' page from the nav menu where my
-					contact information is listed.
+					If you would like to contact Matt with any business offers or questions, please visit the 'Contact' page from the nav
+					menu where the company contact information is listed.
 				</Typography>
 			</Box>
 
