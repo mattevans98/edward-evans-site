@@ -1,4 +1,4 @@
-# Edward Evans Solutions, LLC. Website
+# Edward Evans Technology, LLC. Website
 
 This is a website to showcase my portfolio as a software engineer
 
