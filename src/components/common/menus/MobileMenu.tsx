@@ -42,7 +42,7 @@ const MobileMenu = (): React.ReactElement => {
 				</Link>
 			</Menu>
 			<Typography variant="h1" className={ classes.mobileTitle }>
-				High-Order Bit
+				Edward Evans Technology
 			</Typography>
 			<IconButton edge="end">
 				<DesktopMacIcon/>
