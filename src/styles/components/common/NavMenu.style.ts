@@ -17,5 +17,7 @@ export const useNavStyles = makeStyles({
         textAlign: 'center',
         fontSize: '1.5rem'
     },
-    mobileMenuButton: {}
+    mobileMenuButton: {
+        color: colors.text.primary,
+    }
 });

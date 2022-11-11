@@ -46,5 +46,6 @@ export const useHomeStyles = makeStyles({
 	homeFooter: {
 		textAlign: 'center',
 		fontStyle: 'italic',
+		marginBottom: '2rem'
 	}
 });
