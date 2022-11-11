@@ -28,6 +28,12 @@ export const useHomeStyles = makeStyles({
 			fontSize: '3rem'
 		}
 	},
+	homeP: {
+		textAlign: 'center',
+		fontSize: '1.375rem',
+		marginTop: '1rem',
+		marginBottom: '1rem',
+	},
 	underConstructionBox: {
 		border: '2px solid white',
 		padding: '1rem',
@@ -36,5 +42,9 @@ export const useHomeStyles = makeStyles({
 		['@media (min-width:600px)']: {
 			padding: '3rem'
 		}
+	},
+	homeFooter: {
+		textAlign: 'center',
+		fontStyle: 'italic',
 	}
 });
