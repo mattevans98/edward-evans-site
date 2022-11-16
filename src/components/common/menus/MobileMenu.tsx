@@ -28,16 +28,16 @@ const MobileMenu = (): React.ReactElement => {
 				<MenuIcon />
 			</IconButton>
 			<Menu id="mobileMenu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-				<Link to="/home" className={classes.navMenuLink}>
-					<MenuItem onClick={handleClose}>Home</MenuItem>
+				<Link to="/home" className={ classes.navMenuLink }>
+					<MenuItem onClick={ handleClose }>Home</MenuItem>
 				</Link>
-				<Link to="/" className={classes.navMenuLink}>
+				<Link to="/placeholder" className={ classes.navMenuLink }>
 					<MenuItem onClick={ handleClose }>About</MenuItem>
 				</Link>
-				<Link to="/" className={ classes.navMenuLink }>
+				<Link to="/placeholder" className={ classes.navMenuLink }>
 					<MenuItem onClick={ handleClose }>Projects</MenuItem>
 				</Link>
-				<Link to="/" className={ classes.navMenuLink }>
+				<Link to="/contact" className={ classes.navMenuLink }>
 					<MenuItem onClick={ handleClose }>Contact</MenuItem>
 				</Link>
 			</Menu>

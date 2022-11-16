@@ -8,7 +8,7 @@ export const useNavStyles = makeStyles({
     },
     navAppBar: {
         width: '100vw',
-        marginBottom: '3vh',
+        marginBottom: '0',
         background: colors.background.secondary,
         boxShadow: '0px 0px 1em 0.125em rgba(0, 0, 0, 0.8)',
         color: colors.text.primary

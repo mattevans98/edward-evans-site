@@ -18,14 +18,14 @@ const DesktopMenu = (props: NavMenuProps): React.ReactElement => {
 			<Link to="/home" className={ classes.navMenuLink }>
 				<Tab icon={ <HomeIcon/> }/>
 			</Link>
-			<Link to="/" className={ classes.navMenuLink }>
+			<Link to="/placeholder" className={ classes.navMenuLink }>
 				<Tab label="About"/>
 			</Link>
-			<Link to="/" className={ classes.navMenuLink }>
+			<Link to="/placeholder" className={ classes.navMenuLink }>
 				<Tab label="Projects"/>
 			</Link>
-			<Link to="/" className={ classes.navMenuLink }>
-				<Tab label="Contact" />
+			<Link to="/contact" className={ classes.navMenuLink }>
+				<Tab label="Contact"/>
 			</Link>
 		</Tabs>
 	);

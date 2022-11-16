@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Box, CssBaseline, useMediaQuery } from '@material-ui/core';
 import HomePage from './components/homepage/HomePage';
 import LandingPage from './components/landing-page/LandingPage';
+import ContactPage from "./components/contact-page/ContactPage";
+import PlaceholderPage from "./components/placeholder-page/PlaceholderPage";
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
@@ -23,8 +25,10 @@ const App = (): React.ReactElement => {
 			<CssBaseline/>
 			<Box className={ classes.rootContainer }>
 				<Routes>
-					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
 					<Route path="/" element={ <LandingPage/> }/>
+					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
+					<Route path="/contact" element={ <ContactPage { ...{ isMobile, currentTab, handleTabChange } }/> }/>
+					<Route path="/placeholder" element={ <PlaceholderPage { ...{ isMobile, currentTab, handleTabChange } }/> }/>
 				</Routes>
 			</Box>
 		</ThemeProvider>
