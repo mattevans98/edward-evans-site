@@ -24,8 +24,8 @@ const DesktopMenu = (props: NavMenuProps): React.ReactElement => {
 			<Link to="/" className={ classes.navMenuLink }>
 				<Tab label="Projects"/>
 			</Link>
-			<Link to="/" className={ classes.navMenuLink }>
-				<Tab label="Contact" />
+			<Link to="/contact" className={ classes.navMenuLink }>
+				<Tab label="Contact"/>
 			</Link>
 		</Tabs>
 	);

@@ -37,7 +37,7 @@ const MobileMenu = (): React.ReactElement => {
 				<Link to="/" className={ classes.navMenuLink }>
 					<MenuItem onClick={ handleClose }>Projects</MenuItem>
 				</Link>
-				<Link to="/" className={ classes.navMenuLink }>
+				<Link to="/contact" className={ classes.navMenuLink }>
 					<MenuItem onClick={ handleClose }>Contact</MenuItem>
 				</Link>
 			</Menu>

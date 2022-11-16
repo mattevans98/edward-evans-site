@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, CssBaseline, useMediaQuery } from '@material-ui/core';
 import HomePage from './components/homepage/HomePage';
 import LandingPage from './components/landing-page/LandingPage';
+import ContactPage from "./components/contact-page/ContactPage";
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { colorPalette } from './styles/utils/themes';
 import { useStyles } from './styles/App.style';
@@ -25,6 +26,7 @@ const App = (): React.ReactElement => {
 				<Routes>
 					<Route path="/home" element={ <HomePage { ...{ isMobile, currentTab, handleTabChange } } /> }/>
 					<Route path="/" element={ <LandingPage/> }/>
+					<Route path="/contact" element={ <ContactPage { ...{ isMobile, currentTab, handleTabChange } }/> }/>
 				</Routes>
 			</Box>
 		</ThemeProvider>
