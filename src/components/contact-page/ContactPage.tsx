@@ -5,7 +5,6 @@ import { Box, Typography, useTheme } from "@material-ui/core";
 import { useContactStyles } from '../../styles/components/ContactPage.style';
 
 const ContactPage = (props: ContactPageProps): React.ReactElement => {
-    const { isMobile } = props;
     const theme = useTheme();
     const classes = useContactStyles(theme);
 
