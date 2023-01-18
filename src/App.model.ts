@@ -1,3 +1,3 @@
 export interface CommonProps {
-	isMobile: boolean;
+    isMobile: boolean;
 }
