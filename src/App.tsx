@@ -11,8 +11,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = (): React.ReactElement => {
     const [currentTab, setCurrentTab] = useState(0);
-    const palette = colorPalette();
-    const themeWithColors = createTheme(palette);
+    const themeWithColors = createTheme(colorPalette());
     const classes = useStyles(themeWithColors);
     const isMobile = useMediaQuery(themeWithColors.breakpoints.down('sm'));
 

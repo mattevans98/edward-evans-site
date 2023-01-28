@@ -7,7 +7,7 @@ export const useButtonOverrides = makeStyles(
             color: colors.text.primary
         },
         outlined: {
-            border: '1px solid rgba(255, 255, 255, 0.5)'
+            border: `1px solid ${ colors.accents.primary }`
         }
     },
     { name: 'MuiButton' }
