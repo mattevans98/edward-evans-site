@@ -1,28 +1,21 @@
 import { ThemeOptions } from '@material-ui/core';
-import indigo from '@material-ui/core/colors/indigo';
-import deepPurple from '@material-ui/core/colors/deepPurple';
+import colors from "../colors";
 
 export const colorPalette = (): ThemeOptions => {
     return {
         palette: {
             primary: {
-                main: indigo[700],
-                light: indigo[500],
-                dark: indigo[900],
-                contrastText: 'rgba(255, 255, 255, 0.85)'
+                main: colors.accents.primary
             },
             secondary: {
-                main: deepPurple[700],
-                light: deepPurple[500],
-                dark: deepPurple[900],
-                contrastText: 'rgba(255, 255, 255, 0.85)'
+                main: colors.accents.secondary
             },
             background: {
-                default: `linear-gradient(45deg, ${ deepPurple[900] } 30%, ${ indigo[400] } 90%)`,
-                paper: `linear-gradient(90deg, ${ indigo[300] } 30%, ${ deepPurple[900] } 90%)`
+                default: colors.background.primary,
+                paper: colors.background.secondary
             },
             text: {
-                primary: 'rgba(255, 255, 255, 0.85)'
+                primary: colors.text.primary
             }
         }
     };
