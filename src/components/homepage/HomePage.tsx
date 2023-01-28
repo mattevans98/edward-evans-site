@@ -46,7 +46,7 @@ const HomePage = (props: HomePageProps): React.ReactElement => {
 				<Typography variant="body2" className={ commonClasses.footer }>
 					Made with love and React by Matt Evans.
 					<br/>
-					© 2022 Matthew Evans. All rights reserved.
+					© 2023 Matthew Evans. All rights reserved.
 				</Typography>
 			</Box>
 		</Box>
