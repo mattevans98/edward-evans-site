@@ -14,7 +14,7 @@ const DesktopMenu = (props: NavMenuProps): React.ReactElement => {
     useNavButtonOverrides();
 
     return (
-        <Tabs value={ currentTab } onChange={ handleTabChange }>
+        <Tabs value={ false } onChange={ handleTabChange }>
             <Link to="/home" className={ classes.navMenuLink }>
                 <Tab icon={ <HomeIcon/> }/>
             </Link>
