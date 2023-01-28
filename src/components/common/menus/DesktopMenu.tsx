@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useNavStyles } from '../../../styles/components/common/NavMenu.style';
 import { useNavButtonOverrides, useTabsOverrides } from '../../../styles/utils/MuiOverrides';
 import { NavMenuProps } from '../utils/NavMenu.model';
-import HomeIcon from '@material-ui/icons/Home';
 
 const DesktopMenu = (props: NavMenuProps): React.ReactElement => {
     const { currentTab, handleTabChange } = props;
@@ -16,7 +15,7 @@ const DesktopMenu = (props: NavMenuProps): React.ReactElement => {
     return (
         <Tabs value={ false } onChange={ handleTabChange }>
             <Link to="/home" className={ classes.navMenuLink }>
-                <Tab icon={ <HomeIcon/> }/>
+                <Tab label="Home"/>
             </Link>
             <Link to="/placeholder" className={ classes.navMenuLink }>
                 <Tab label="About"/>

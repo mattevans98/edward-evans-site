@@ -12,7 +12,7 @@ export const colors = {
         secondary: '#fff'
     },
     accents: {
-        primary: `${ lightGreen["A400"] }`,
+        primary: `#00ff00`,
         secondary: '#fff'
     }
 }

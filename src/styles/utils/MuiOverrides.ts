@@ -16,7 +16,7 @@ export const useButtonOverrides = makeStyles(
 export const useTabsOverrides = makeStyles(
     {
         flexContainer: {
-            justifyContent: 'space-between'
+            justifyContent: 'space-around'
         }
     },
     { name: 'MuiTabs' }
@@ -25,7 +25,7 @@ export const useTabsOverrides = makeStyles(
 export const useNavButtonOverrides = makeStyles(
     {
         root: {
-            fontWeight: 700
+            fontWeight: 900
         }
     },
     { name: 'MuiButtonBase' }
