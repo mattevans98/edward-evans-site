@@ -7,8 +7,7 @@ import DesktopMenu from './menus/DesktopMenu';
 
 const NavMenu = (props: NavMenuProps): React.ReactElement => {
     const { isMobile } = props;
-    const theme = useTheme();
-    const classes = useNavStyles(theme);
+    const classes = useNavStyles(useTheme());
 
     return (
         <AppBar position="sticky" className={ classes.navAppBar } color="primary">
